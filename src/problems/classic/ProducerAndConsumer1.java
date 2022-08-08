@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import multithreadingandparallelcomputing.Simple.WaitAndNotify;
 
 /**
  *
@@ -81,7 +80,7 @@ public class ProducerAndConsumer1 {
                 try {
                     processor.producer();
                 } catch (InterruptedException ex) {
-                    Logger.getLogger(WaitAndNotify.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Processor.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });
@@ -92,7 +91,7 @@ public class ProducerAndConsumer1 {
                 try {
                     processor.consumer();
                 } catch (InterruptedException ex) {
-                    Logger.getLogger(WaitAndNotify.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Processor.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });

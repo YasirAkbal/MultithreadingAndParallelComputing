@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package multithreadingandparallelcomputing.Simple;
+package basic;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,7 +18,7 @@ import java.util.logging.Logger;
  * "increment1" ve "increment2" metotları class bazındaki bu ortak monitoru kullandıkları için aynı anda çalışamazlar. Bu örnekte oldugu gibi bu metotlardaki işlemler bağımsız,
  * inconsistent veri oluşturmayacak işlemler ise bunların birbirini dışlaması anlamsızdır ve performansı düşürür. Bu yüzden farklı metot ve/veya metot parçaları için
  * "custom objeler" kullanarak farklı mutal exclusion durumlarını sağlarız.
- * Not: increment metotları statik olmasaydı object bazında olacaklardı ve bu bahsedilen performans kaybı oluşmayacaktı.
+ * Not: increment metotları statik oldugu için class bazında monitorlerdir.
  */
 public class ProblemWithSynchronizedKeyword {
     static int counter1 = 0;
