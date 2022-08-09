@@ -16,7 +16,6 @@ import java.util.logging.Logger;
  * Üretici belirlenen üst limit kadar ürünü ürütmeden tüketici ürün tüketmeyecek.
  * Üretici ürünleri ardışık olarak üretecek.
  * Tüketici tüm ürünleri ardışık olarak tüketecek.(ürün sayısı alt limite ulaşına kadar üretici yeni ürün üretmeyecek)
- * Tabiki bu senaryodaki ardışık durumları döngü ile halletmek daha mantıklı olurdu ama burada amacım pratik yapmak.
  */
 class Processor {
 
@@ -72,7 +71,7 @@ class Processor {
 public class ProducerAndConsumer1 {
 
     public static void main(String[] args) {
-        Processor processor = new Processor();
+        Processor2 processor = new Processor2();
 
         Thread t1 = new Thread(new Runnable() {
             @Override
@@ -80,7 +79,7 @@ public class ProducerAndConsumer1 {
                 try {
                     processor.producer();
                 } catch (InterruptedException ex) {
-                    Logger.getLogger(Processor.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Processor2.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });
@@ -91,7 +90,7 @@ public class ProducerAndConsumer1 {
                 try {
                     processor.consumer();
                 } catch (InterruptedException ex) {
-                    Logger.getLogger(Processor.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(Processor2.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         });
