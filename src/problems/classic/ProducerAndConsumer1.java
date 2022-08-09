@@ -12,6 +12,7 @@ import java.util.logging.Logger;
 /**
  *
  * @author yasir
+ * synchronized&custom locklar ile
  * Üretici-tüketici problemi senaryosu(synchronized keyword ile):
  * Üretici belirlenen üst limit kadar ürünü ürütmeden tüketici ürün tüketmeyecek.
  * Üretici ürünleri ardışık olarak üretecek.

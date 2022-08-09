@@ -14,6 +14,7 @@ import java.util.logging.Logger;
 /**
  *
  * @author yasir
+ * ReentrantLock ve Condition ile
  * Üretici-tüketici problemi senaryosu(ReentrantLock ve conditions ile):
  * Üretici belirlenen üst limit kadar ürünü ürütmeden tüketici ürün tüketmeyecek.
  * Üretici ürünleri ardışık olarak üretecek.
