@@ -84,7 +84,7 @@ public class ProblemWithSynchronizedKeyword {
     2 farklı increment metotu için 2 farklı object örneği oluşturarak bunları lock için kullanıyorum.
     */
     static final Object lock1 = new Object();
-    static final  Object lock2 = new Object();
+    static final Object lock2 = new Object();
     
     static void increment1Custom() {
         synchronized(lock1) { //Not: sadece blok içindeki işlemler için mutual exclusion uygulanıyor.
